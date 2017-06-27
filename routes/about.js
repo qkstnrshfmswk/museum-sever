@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/img', function(req, res, next){
-  res.render()
+  res.json({ info_img: 'http://localhost:3000/public/museum1_3.png'});
 })
 
 module.exports = router;
