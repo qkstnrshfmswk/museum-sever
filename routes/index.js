@@ -7,8 +7,15 @@ router.get('/', function(req, res, next) {
 
 });
 
-router.get('/img', function(req, res, next){
-  res.render()
+router.get('/museum_info', function(req, res, next){
+  res.json([{"info_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/1.jpg", "info": "About museum : This is museum"}]);
+})
+
+
+router.get('/main', function(req, res, next){
+  res.json([{"main_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/1.jpg"},
+            {"main_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/1.jpg"},
+            {"main_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/1.jpg"}]);
 })
 
 module.exports = router;
