@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-
 router.get('/:_itemID', function(req, res, next){
   id = req.params._itemID;
   console.log(id);
