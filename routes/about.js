@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/', function(req, res, next){
-  res.json([{"info_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/1.jpg", "info": "About museum \\n This is museum"}]);
+  res.json([{"info_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/1.jpg", "info": "About museum  This is museum"}]);
 })
 
 
