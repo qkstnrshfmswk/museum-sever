@@ -9,6 +9,8 @@ var index = require('./routes/index');
 var item = require('./routes/item');
 var facility = require('./routes/facility');
 var section = require('./routes/section');
+var facility = require('./routes/main');
+var facility = require('./routes/museum_info');
 var path = require('path');
 var app = express();
 
@@ -28,6 +30,8 @@ app.use('/', index);
 app.use('/item', item);
 app.use('/facility', facility);
 app.use('/section', section);
+app.use('/main', main);
+app.use('/museum_info', museum_info);
 app.use('/public', express.static(path.join(__dirname, '/public/images')));
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
