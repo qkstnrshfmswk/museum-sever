@@ -8,9 +8,9 @@ router.get('/museum_info', function(req, res, next){
 
 
 router.get('/main', function(req, res, next){
-  res.json([{"main_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/1.jpg"},
-            {"main_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/1.jpg"},
-            {"main_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/1.jpg"}]);
+  res.json([{"img_path": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/1.jpg"},
+            {"img_path": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/2.jpg"},
+            {"img_path": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/3.jpg"}]);
 })
 
 module.exports = router;
