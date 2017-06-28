@@ -31,7 +31,7 @@ router.get('/Garden', function(req, res, next){
             "location":"nepal"}]);
 
 });
-router.get('/climing', function(req, res, next){
+router.get('/climbing', function(req, res, next){
   res.json([{"lib_name":"Annapurna",
             "location":"nepal"}]);
 
