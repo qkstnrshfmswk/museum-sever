@@ -9,8 +9,8 @@ var index = require('./routes/index');
 var item = require('./routes/item');
 var facility = require('./routes/facility');
 var section = require('./routes/section');
-var facility = require('./routes/main');
-var facility = require('./routes/museum_info');
+var main = require('./routes/main');
+var museum_info = require('./routes/museum_info');
 var path = require('path');
 var app = express();
 
