@@ -10,7 +10,7 @@ router.get('/', function(req, res, next){
 });
 
 router.get('/libraries', function(req, res, next){
-  res.json([{"lib_name":"Annapurna",
+  res.json([{"lib_name":"Anddddddpurna",
             "location":"nepal"}]);
 
 });
