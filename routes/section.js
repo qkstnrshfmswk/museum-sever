@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req, res, next){
-  res.json([{"section": "section1", "section": "section2", "section": "section3"}]);
+  res.json([{"section": "section1"}, {"section": "section2"}, {"section": "section3"}]);
 })
 
 router.get('/item_list', function(req, res, next){
