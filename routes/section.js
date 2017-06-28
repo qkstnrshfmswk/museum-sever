@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/', function(req, res, next){
-  res.json([{"section": "section1"}, {"section": "section2"}, {"section": "section3"}]);
+router.get('/:_exhibit_ID', function(req, res, next){
+  id = req.params._exhibit_ID;
+  res.json([{"exhibit_loc": "section1"}, {"section": "section2"}, {"section": "section3"}]);
 });
 
 router.get('/item_list', function(req, res, next){
