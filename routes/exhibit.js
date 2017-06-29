@@ -17,9 +17,10 @@ influencing the subconscious of the visitors that they are at the height to unde
 the information dis-played just below them.<br><br>\
 For the close observation, when the visitors stare down the basement, they are ushered by the museum \
 guides to the adjoining video hall to orient them about the people, culture and the mountains of Khumbu region.",
-                                "section_list":[{"section_name":"Mountain People of Nepal", "section_num": 1}, 
-                                                {"section_name":"Mountain People of the World", "section_num": 2},
-                                                {"section_name": "The Mandala", "section_num" : 3}]}]);
+                                "section_list":[{"section_name":"Mountain Section", "section_num": 1}, 
+                                                {"section_name":"Geological Section", "section_num": 2},
+                                                {"section_name": "Flora and Fauna Section", "section_num" : 3},
+                                                {"section_name": "Corner of Dedication", "section_num" : 4}]}]);
         break;
 
         case '2' : res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/exhibit_WM.PNG",
