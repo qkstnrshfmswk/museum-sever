@@ -8,7 +8,7 @@ router.get('/:_exhibit_ID', function(req, res, next){
     id = req.params._exhibit_ID;
     switch(id)
     {
-        case '1':  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall-MP.jpg",
+        case '1':  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall-MP.png",
                               "exhibit_name": [{"line":"Hall of"}, {"line":"Mountain people"}],
                               "exhibit_loc": "GF",
                               "exhibit_desc" : "It showcases indigenous habitants of the mountain regions of Nepal and the \
@@ -23,7 +23,7 @@ the people, culture and the mountains of Khumbu region.",
                                                 {"section_name": "The Mandala", "section_num" : 3}]}]);
         break;
 
-        case '2' : res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_WM.jpg",
+        case '2' : res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_WM.png",
                               "exhibit_name": [{"line":"Hall of"}, {"line":"World Mountain"}],
                               "exhibit_loc": "BF",
                               "exhibit_desc" : "Second hall is the Hall of World Mountains where visitors are introduced to the \
@@ -42,7 +42,7 @@ contributions of five prominent personalities are displayed",
                                                 {"section_name": "Corner of Dedication", "section_num" : 4}]}]);
         break;
 
-        case '3' :  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_MA.jpg",
+        case '3' :  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_MA.png",
                               "exhibit_name": [{"line":"Hall of"}, {"line":"Mountain Activities"}],
                               "exhibit_loc": "BF",
                               "exhibit_desc" :"This third hall displays the equipments, clothes, different professional loops of \
@@ -67,7 +67,7 @@ whom nobody has seen but many like to believe in.",
                                                 {"section_name": "Climate Change Section", "section_num" : 5},
                                                 {"section_name": "Touch-screen", "section_num" : 6}]}]);
         break;
-        case '4' :  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_AE.jpg",
+        case '4' :  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_AE.png",
                               "exhibit_name": [{"line":"Hall of"}, {"line":"Associates\' Exhibition"}],
                               "exhibit_loc": "BF",
                               "exhibit_desc" : "The displays in the hall of arrangements in the basement ends here, \
