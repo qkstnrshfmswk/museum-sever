@@ -8,64 +8,84 @@ router.get('/:_exhibit_ID', function(req, res, next){
     id = req.params._exhibit_ID;
     switch(id)
     {
-        case '1':  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/exhibit_MP.PNG",
+        case '1':  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall-MP.jpg",
                               "exhibit_name": [{"line":"Hall of"}, {"line":"Mountain people"}],
                               "exhibit_loc": "GF",
-                              "exhibit_desc" : "It shows indigenous habitants of the mountain re-gions of Nepal and the world. \
-There life style and culture are exposed impressively below this first basement ball, \
-influencing the subconscious of the visitors that they are at the height to understand and know \
-the information dis-played just below them.<br><br>\
-For the close observation, when the visitors stare down the basement, they are ushered by the museum \
-guides to the adjoining video hall to orient them about the people, culture and the mountains of Khumbu region.",
+                              "exhibit_desc" : "It showcases indigenous habitants of the mountain regions of Nepal and the \
+world. Their life style and culture are exposed impressively below this first \
+basement hall, influencing the subconscious of the visitors that they are at the \
+height to understand and know the information displayed just below them. <br>\
+For the close observation, when the visitors stare down the basement, they are \
+ushered by the museum guides to the adjoining video hall to orient them about \
+the people, culture and the mountains of Khumbu region.",
+                                "section_list":[{"section_name":"Mountain People of Nepal", "section_num": 1}, 
+                                                {"section_name":"Mountain People of the World", "section_num": 2},
+                                                {"section_name": "The Mandala", "section_num" : 3}]}]);
+        break;
+
+        case '2' : res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_WM.jpg",
+                              "exhibit_name": [{"line":"Hall of"}, {"line":"World Mountain"}],
+                              "exhibit_loc": "BF",
+                              "exhibit_desc" : "Second hall is the Hall of World Mountains where visitors are introduced to the \
+national and international mountains, historical background, highest peaks, \
+Information of all 14 peaks over 8 thousand meters of height and their \
+photographs are available in this section. Geological section in this hall displays \
+collection of important rock samples that formed geological formation of the \
+Mountain range.<br>\
+Flora and fauna collected in picture and real stuffed replicas; plants and wild \
+animals excite the visitors as if they are watching the serene beauty and real \
+wild lives in the wild in yet another small section called corner of dedication, \
+contributions of five prominent personalities are displayed",
                                 "section_list":[{"section_name":"Mountain Section", "section_num": 1}, 
                                                 {"section_name":"Geological Section", "section_num": 2},
                                                 {"section_name": "Flora and Fauna Section", "section_num" : 3},
                                                 {"section_name": "Corner of Dedication", "section_num" : 4}]}]);
         break;
 
-        case '2' : res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/exhibit_WM.PNG",
-                              "exhibit_name": [{"line":"Hall of"}, {"line":"World Mountain"}],
-                              "exhibit_loc": "GF",
-                              "exhibit_desc" : "It shows indigenous habitants of the mountain re-gions of Nepal and the world. \
-There life style and culture are exposed impressively below this first basement ball, \
-influencing the subconscious of the visitors that they are at the height to understand and know \
-the information dis-played just below them.<br><br>\
-For the close observation, when the visitors stare down the basement, they are ushered by the museum \
-guides to the adjoining video hall to orient them about the people, culture and the mountains of Khumbu region.",
-                                "section_list":[{"section_name":"Mountain People of Nepal", "section_num": 1}, 
-                                                {"section_name":"Mountain People of the World", "section_num": 2},
-                                                {"section_name": "The Mandala", "section_num" : 3}]}]);
-        break;
-
-        case '3' :  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/exhibit_MA.PNG",
+        case '3' :  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_MA.jpg",
                               "exhibit_name": [{"line":"Hall of"}, {"line":"Mountain Activities"}],
-                              "exhibit_loc": "GF",
-                              "exhibit_desc" : "It shows indigenous habitants of the mountain re-gions of Nepal and the world. \
-There life style and culture are exposed impressively below this first basement ball, \
-influencing the subconscious of the visitors that they are at the height to understand and know \
-the information dis-played just below them.<br><br>\
-For the close observation, when the visitors stare down the basement, they are ushered by the museum \
-guides to the adjoining video hall to orient them about the people, culture and the mountains of Khumbu region.",
-                                "section_list":[{"section_name":"Mountain People of Nepal", "section_num": 1}, 
-                                                {"section_name":"Mountain People of the World", "section_num": 2},
-                                                {"section_name": "The Mandala", "section_num" : 3}]}]);
+                              "exhibit_loc": "BF",
+                              "exhibit_desc" :"This third hall displays the equipments, clothes, different professional loops of \
+the ropes and photographs of French Expedition team leader; recorder holder \
+Maurice Herzog who scaled Annapurna for the first time in 1950. Beside Herzog \
+is Junko Tabei, the first Japanese women to scale Mt Everest. Timanishi, the \
+first Manaslu summiteers and other climberʼs equipments are showcased here.<br>\
+This hall also introduces fourteen peaks over eight thousand meters in a \
+chronological order to the year they were conquered.<br><br>\
+Equipment necessary for climbing mountains and rocks, their varieties and uses \
+make the visitors familiar on how hard the scaling these mountains can be. Last \
+but not the least is the famous legendry tales of Yeti, its myths, and \
+publications of the illusive giant brown bear in one corner of the first floor. \
+Although nobody has seen the creature, many have claimed of witnessing Yeti. \
+Some have claimed to have photographed its foot prints on icy blanket, and \
+some have seen it with their eyes closed. This section is dedicated to the Yeti \
+whom nobody has seen but many like to believe in.",
+                                "section_list":[{"section_name":"Mountaineering Section", "section_num": 1}, 
+                                                {"section_name":"Mountaineering Equipment Section", "section_num": 2},
+                                                {"section_name": "Mountain Ecoloby / Environment Section", "section_num" : 3},
+                                                {"section_name": "Imaging Everest", "section_num" : 4},
+                                                {"section_name": "Climate Change Section", "section_num" : 5},
+                                                {"section_name": "Touch-screen", "section_num" : 6}]}]);
         break;
-
-        case '4' :  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/exhibit_AE.PNG",
+        case '4' :  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_AE.jpg",
                               "exhibit_name": [{"line":"Hall of"}, {"line":"Associates\' Exhibition"}],
-                              "exhibit_loc": "GF",
-                              "exhibit_desc" : "It shows indigenous habitants of the mountain re-gions of Nepal and the world. \
-There life style and culture are exposed impressively below this first basement ball, \
-influencing the subconscious of the visitors that they are at the height to understand and know \
-the information dis-played just below them.<br><br>\
-For the close observation, when the visitors stare down the basement, they are ushered by the museum \
-guides to the adjoining video hall to orient them about the people, culture and the mountains of Khumbu region.",
-                                "section_list":[{"section_name":"Mountain People of Nepal", "section_num": 1}, 
-                                                {"section_name":"Mountain People of the World", "section_num": 2},
-                                                {"section_name": "The Mandala", "section_num" : 3}]}]);
+                              "exhibit_loc": "BF",
+                              "exhibit_desc" : "The displays in the hall of arrangements in the basement ends here, \
+and the visitors move to the first floor for further information related to \
+socioeconomic life of the mountain people, their activities in the \
+different periods. The present activities and future planned activities \
+for better conservation of environment, flora and fauna, for sustainable \
+environment of the region. This section is called Hall of Associateʼs \
+Guest exhibition. In this hall IUCN and ICIMOD display their past, \
+present and future activities. The 39 quiz questions and their answers \
+related to mountains are put on tin folios fixed along the railing to \
+stimulate the visiting students with their IQ tests.",
+                                "section_list":[{"section_name":"Lakhang", "section_num": 1}, 
+                                                {"section_name":"Library", "section_num": 2},
+                                                {"section_name": "Mt.Manaslu Model", "section_num" : 3},
+                                                {"section_name": "Yak Model", "section_num" : 4}]}]);
         break;
     }
 });
-
 
 module.exports = router;
