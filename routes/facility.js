@@ -3,7 +3,7 @@ var router = express.Router();
 
 router.get('/', function(req, res, next){
     res.json([{"facilities":"Library"},
-             {"facilities":"Gorkha Village Restaurant"},
+             {"facilities":"Gokha Village Restaurant"},
              {"facilities":"Souvenir Shop"},
              {"facilities": "Wall Climbing"},
              {"facilities":"Parking Lot"}])
