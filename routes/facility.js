@@ -69,7 +69,7 @@ else if(type == "Wall Climbing")
               {"info_type":"Available Age", "info_content":"Up to 15"},
               {"info_type":"Location", "info_content":"Middle-east side"}
               ]);
-else if(type == "Parking lot")
+else if(type == "Parking Lot")
     res.json([{"img":"http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/Parking_image.jpg"},
               {"info_type":"Parking fee", "info_content":"free"},
               {"info_type":"Available numbers", "info_content":"Up to 30"},
