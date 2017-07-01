@@ -54,7 +54,7 @@ else if(type == "Gokha Village Restaurant")
                       {"dish_name":"Coffee"},
                       {"dish_name": "Cold Drink- Coke, Sprite, Fanta"}]}]);
 else if(type == "Souvenir Shop")
-    res.json([{"shop_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/Souvenir_image.jpg"},
+    res.json([{"img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/Souvenir_image.jpg"},
               {"product":"Bags", "price":"Rs.500~1000"},
               {"product":"Post Card", "price":"Rs.20~40"},
               {"product":"Magnetics", "price":"Rs.50~100"},
@@ -64,13 +64,13 @@ else if(type == "Souvenir Shop")
               {"product":"Miscellaneous goods", "price":"Rs.500~1500"}
             ]);
 else if(type == "Wall Climbing")
-    res.json([{"Climbing_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/Climbing_image.jpg"}, 
+    res.json([{"img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/Climbing_image.jpg"}, 
               {"info_type":"Entry fee", "info_content":"free"},
               {"info_type":"Available Age", "info_content":"Up to 15"},
               {"info_type":"Location", "info_content":"Middle-east side"}
               ]);
 else if(type == "Parking lot")
-    res.json([{"Parking_img":"http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/Parking_image.jpg"},
+    res.json([{"img":"http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/Parking_image.jpg"},
               {"info_type":"Parking fee", "info_content":"free"},
               {"info_type":"Available numbers", "info_content":"Up to 30"},
               {"info_type":"Location", "info_content":"Middle-east side"}
