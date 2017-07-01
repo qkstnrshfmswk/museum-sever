@@ -64,7 +64,7 @@ else if(type == "Souvenir Shop")
               {"product":"Miscellaneous goods", "price":"Rs.500~1500"}
             ]);
 else if(type == "Wall Climbing")
-    res.json([{"img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/Climbing_image.jpg"}, 
+    res.json([{"img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/Climbing_image.JPG"}, 
               {"info_type":"Entry fee", "info_content":"free"},
               {"info_type":"Available Age", "info_content":"Up to 15"},
               {"info_type":"Location", "info_content":"Middle-east side"}
