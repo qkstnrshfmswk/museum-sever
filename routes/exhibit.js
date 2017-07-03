@@ -8,7 +8,7 @@ router.get('/:_exhibit_ID', function(req, res, next){
     id = req.params._exhibit_ID;
     switch(id)
     {
-        case '1':  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_MP.jpg",
+        case 'MP':  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_MP.jpg",
                               "exhibit_name": [{"line":"Hall of"}, {"line":"Mountain people"}],
                               "exhibit_loc": "GF",
                               "exhibit_desc" : "It showcases indigenous habitants of the mountain regions of Nepal and the \
@@ -18,12 +18,12 @@ height to understand and know the information displayed just below them. <br>\
 For the close observation, when the visitors stare down the basement, they are \
 ushered by the museum guides to the adjoining video hall to orient them about \
 the people, culture and the mountains of Khumbu region.",
-                                "section_list":[{"section_name":"Mountain People of Nepal", "section_num": 1}, 
-                                                {"section_name":"Mountain People of the World", "section_num": 2},
-                                                {"section_name": "The Mandala", "section_num" : 3}]}]);
+                                "section_list":[{"section_name":"Mountain People of Nepal", "section_num": 1, "section_id":"MP_1"}, 
+                                                {"section_name":"Mountain People of the World", "section_num": 2, "section_id":"MP_2"},
+                                                {"section_name": "The Mandala", "section_num" : 3, "section_id":"MP_3"}]}]);
         break;
 
-        case '2' : res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_WM.jpg",
+        case 'WM' : res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_WM.jpg",
                               "exhibit_name": [{"line":"Hall of"}, {"line":"World Mountain"}],
                               "exhibit_loc": "BF",
                               "exhibit_desc" : "Second hall is the Hall of World Mountains where visitors are introduced to the \
@@ -36,13 +36,13 @@ Flora and fauna collected in picture and real stuffed replicas; plants and wild 
 animals excite the visitors as if they are watching the serene beauty and real \
 wild lives in the wild in yet another small section called corner of dedication, \
 contributions of five prominent personalities are displayed",
-                                "section_list":[{"section_name":"Mountain Section", "section_num": 1}, 
-                                                {"section_name":"Geological Section", "section_num": 2},
-                                                {"section_name": "Flora and Fauna Section", "section_num" : 3},
-                                                {"section_name": "Corner of Dedication", "section_num" : 4}]}]);
+                                "section_list":[{"section_name":"Mountain Section", "section_num": 1, "section_id":"WM_1"}, 
+                                                {"section_name":"Geological Section", "section_num": 2, "section_id":"WM_2"},
+                                                {"section_name": "Flora and Fauna Section", "section_num" : 3, "secion_id":"WM_3"},
+                                                {"section_name": "Corner of Dedication", "section_num" : 4, "section_id":"WM_4"}]}]);
         break;
 
-        case '3' :  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_MA.jpg",
+        case 'MA' :  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_MA.jpg",
                               "exhibit_name": [{"line":"Hall of"}, {"line":"Mountain Activities"}],
                               "exhibit_loc": "BF",
                               "exhibit_desc" :"This third hall displays the equipments, clothes, different professional loops of \
@@ -60,14 +60,14 @@ Although nobody has seen the creature, many have claimed of witnessing Yeti. \
 Some have claimed to have photographed its foot prints on icy blanket, and \
 some have seen it with their eyes closed. This section is dedicated to the Yeti \
 whom nobody has seen but many like to believe in.",
-                                "section_list":[{"section_name":"Mountaineering Section", "section_num": 1}, 
-                                                {"section_name":"Mountaineering Equipment Section", "section_num": 2},
-                                                {"section_name": "Mountain Ecoloby / Environment Section", "section_num" : 3},
-                                                {"section_name": "Imaging Everest", "section_num" : 4},
-                                                {"section_name": "Climate Change Section", "section_num" : 5},
-                                                {"section_name": "Touch-screen", "section_num" : 6}]}]);
+                                "section_list":[{"section_name":"Mountaineering Section", "section_num": 1, "section_id":"MA_1"}, 
+                                                {"section_name":"Mountaineering Equipment Section", "section_num": 2, "section_id":"MA_2"},
+                                                {"section_name": "Mountain Ecoloby / Environment Section", "section_num" : 3, "section_id":"MA_3"},
+                                                {"section_name": "Imaging Everest", "section_num" : 4, "section_id":"MA_4"},
+                                                {"section_name": "Climate Change Section", "section_num" : 5, "section_id":"MA_5"},
+                                                {"section_name": "Touch-screen", "section_num" : 6, "section_id":"MA_6"}]}]);
         break;
-        case '4' :  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_AE.jpg",
+        case 'AE' :  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_AE.jpg",
                               "exhibit_name": [{"line":"Hall of"}, {"line":"Associates\' Exhibition"}],
                               "exhibit_loc": "BF",
                               "exhibit_desc" : "The displays in the hall of arrangements in the basement ends here, \
@@ -80,10 +80,10 @@ Guest exhibition. In this hall IUCN and ICIMOD display their past, \
 present and future activities. The 39 quiz questions and their answers \
 related to mountains are put on tin folios fixed along the railing to \
 stimulate the visiting students with their IQ tests.",
-                                "section_list":[{"section_name":"Lakhang", "section_num": 1}, 
-                                                {"section_name":"Library", "section_num": 2},
-                                                {"section_name": "Mt.Manaslu Model", "section_num" : 3},
-                                                {"section_name": "Yak Model", "section_num" : 4}]}]);
+                                "section_list":[{"section_name":"Lakhang", "section_num": 1, "section_id":"AE_1"}, 
+                                                {"section_name":"Library", "section_num": 2, "section_id":"AE_2"},
+                                                {"section_name": "Mt.Manaslu Model", "section_num" : 3, "section_id":"AE_3"},
+                                                {"section_name": "Yak Model", "section_num" : 4, "section_id":"AE_4"}]}]);
         break;
     }
 });

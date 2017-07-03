@@ -81,25 +81,5 @@ else if(type == "Parking Lot")
   
 });
 //hdgtec558@gmail.com, handong_gtec558
-router.get('/shop', function(req, res, next){
-  res.json([{"lib_name":"Annapurna",
-            "location":"nepal"}]);
 
-});
-
-router.get('/restaurant', function(req, res, next){
-  res.json([{"lib_name":"Annapurna",
-            "location":"nepal"}]);
-
-});
-router.get('/Garden', function(req, res, next){
-  res.json([{"lib_name":"Annapurna",
-            "location":"nepal"}]);
-
-});
-router.get('/climbing', function(req, res, next){
-  res.json([{"lib_name":"Annapurna",
-            "location":"nepal"}]);
-
-});
 module.exports = router;

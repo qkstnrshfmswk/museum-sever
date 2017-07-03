@@ -10,6 +10,23 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.get('/details/:item_id', function(req, res, next){
+  var item_id = req.params.item_id;
+  db.museumItems.find({"item_id":item_id}, function(err, doc){
+    if(err) res.send(err);
+    res.json(doc);
+  });
+});
+
+router.get('/item_list/:section_id', function(req, res, next){
+  var section_id = req.params.section_id;
+  db.museumItems.find({}, {_id:0, "item_id":1, "item_img":1}, function(err, doc){
+    if(err) res.send(err);
+    res.json(doc);
+  });
+});
+
+
 router.post('/', function(req, res) {
   var item_id = req.body.item_id;
   var item_name = req.body.item_name;
