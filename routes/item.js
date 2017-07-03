@@ -20,7 +20,7 @@ router.get('/details/:item_id', function(req, res, next){
 
 router.get('/list/:section_id', function(req, res, next){
   var section_id = req.params.section_id;
-  db.museumItems.find({"section_id":section_id}, {_id:0, "item_id":1, "item_img":1}, function(err, doc){
+  db.museumItems.find({"section_id":section_id}, {_id:0, "item_id":1, "item_img":1, "item_name":1}, function(err, doc){
     if(err) res.send(err);
     res.json(doc);
   });
