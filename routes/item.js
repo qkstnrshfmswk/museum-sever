@@ -4,10 +4,10 @@ var mongo = require('mongojs');
 var db = mongo('museum', ['museumItems'])
 
 router.get('/', function(req, res, next) {
-  db.museumItems.find(), function(err, doc){
+  db.museumItems.find().sort({item_hit_num:1}, function(err, doc){
     if(err) res.send(err);
     res.json(doc);
-  }
+  });
 });
 
 router.post('/', function(req, res) {
