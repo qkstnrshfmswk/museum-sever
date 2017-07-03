@@ -1,5 +1,81 @@
 var express = require('express');
 var router = express.Router();
+var mongo = require('mongojs');
+var db = mongo('museum', ['museumItems'])
+
+router.get('/', function(req, res, next) {
+  db.museumItems.find(), function(err, doc){
+    if(err) res.send(err);
+    res.json(doc);
+  }
+});
+
+router.post('/', function(req, res) {
+  var item_id = req.body.item_id;
+  var item_name = req.body.item_name;
+  var item_img = req.body.item_img;
+  var item_desc = req.body.item_desc;
+  var item_video = req.body.item_video;
+  var category_id = req.body.category_id;
+  var section_id = req.body.section_id;
+  var subsection_id = req.body.subsection_id;
+  var item_hit_num = req.body.item_hit_num;
+
+  db.museumItems.insert(
+        {
+            item_id : item_id,
+            item_name : item_name,
+            item_img: item_img,
+            item_desc: item_desc,
+            item_video: item_video,
+            category_id : category_id,
+            section_id: section_id,
+            subsection_id : subsection_id,
+            item_hit_num : item_hit_num
+        },
+        function(err, doc){
+          if(err) res.send(err);
+          res.json(doc);
+        }
+    )
+});
+
+router.put('/:_id', function(req, res, next){
+  var id = req.params._id;
+
+  var item_id = req.body.item_id;
+  var item_name = req.body.item_name;
+  var item_img = req.body.item_img;
+  var item_desc = req.body.item_desc;
+  var item_video = req.body.item_video;
+  var category_id = req.body.category_id;
+  var section_id = req.body.section_id;
+  var subsection_id = req.body.subsection_id;
+  var item_hit_num = req.body.item_hit_num;
+
+  db.museumItems.update(
+    {
+      _id:mongo.ObjectId(id)
+    },{
+      $set : {
+            item_id : item_id,
+            item_name : item_name,
+            item_img: item_img,
+            item_desc: item_desc,
+            item_video: item_video,
+            category_id : category_id,
+            section_id: section_id,
+            subsection_id : subsection_id,
+            item_hit_num : item_hit_num            
+      }
+    }, {upseet : false},
+    function (err, doc){
+      if(err) res.send(err);
+      res.json(doc);
+    }
+  )
+});
+
 
 router.get('/:_itemID', function(req, res, next){
   id = req.params._itemID;
