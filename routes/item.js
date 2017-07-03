@@ -26,6 +26,14 @@ router.get('/list/:section_id', function(req, res, next){
   });
 });
 
+router.get('/search/:item_name', function(req, res, next){
+  var item_name = req.params.item_name;
+  db.museumItems.find({"item_name": item_name}, {"item_id":1, "section_id":1, "_id":0}, function(err, doc){
+    if(err) res.send(err);
+    res.json(doc);
+  })
+});
+
 
 router.post('/', function(req, res) {
   var item_id = req.body.item_id;
