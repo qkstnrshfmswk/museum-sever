@@ -40,6 +40,22 @@ router.post('/', function(req, res) {
     )
 });
 
+router.get('/hit/:item_id/:hit_num', function(req, res, next){
+  var item_hit_num = parseInt(req.params.hit_num)+1;
+  console.log("hi num"+item_hit_num);
+  var item_id = req.params.item_id;
+  console.log("item_id"+ item_id);
+  db.museumItems.findAndModify({
+    query: { item_id: item_id },
+    update: { $set: { item_hit_num: item_hit_num } },
+    new: false
+}, function (err, doc, lastErrorObject) {
+    console.log("update"+ item_hit_num);
+      if(err) res.send(err);
+      res.json(doc);
+})
+});
+
 router.put('/:_id', function(req, res, next){
   var id = req.params._id;
 
@@ -58,6 +74,7 @@ router.put('/:_id', function(req, res, next){
       _id:mongo.ObjectId(id)
     },{
       $set : {
+            
             item_id : item_id,
             item_name : item_name,
             item_img: item_img,
@@ -68,7 +85,7 @@ router.put('/:_id', function(req, res, next){
             subsection_id : subsection_id,
             item_hit_num : item_hit_num            
       }
-    }, {upseet : false},
+    }, {upset : false},
     function (err, doc){
       if(err) res.send(err);
       res.json(doc);
