@@ -4,7 +4,7 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next){
   res.json([{
-"info_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/about_img.jpg",
+"info_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/about_img.png",
 "info": "Many people in the world may not know much about the small country\
 called Nepal, but they certainly know about this peak, the tallest in the\
 world, called Mount Everest.<br><br>\

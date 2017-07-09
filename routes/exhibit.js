@@ -8,9 +8,10 @@ router.get('/:_exhibit_ID', function(req, res, next){
     id = req.params._exhibit_ID;
     switch(id)
     {
-        case 'MP':  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_MP.jpg",
+        case 'MP':  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_MP.png",
                               "exhibit_name": [{"line":"Hall of"}, {"line":"Mountain people"}],
                               "exhibit_loc": "GF",
+                              "exhibit_id": "MP",
                               "exhibit_desc" : "It showcases indigenous habitants of the mountain regions of Nepal and the \
 world. Their life style and culture are exposed impressively below this first \
 basement hall, influencing the subconscious of the visitors that they are at the \
@@ -23,9 +24,10 @@ the people, culture and the mountains of Khumbu region.",
                                                 {"section_name": "The Mandala", "section_num" : 3, "section_id":"MP_3"}]}]);
         break;
 
-        case 'WM' : res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_WM.jpg",
+        case 'WM' : res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_WM.png",
                               "exhibit_name": [{"line":"Hall of"}, {"line":"World Mountain"}],
                               "exhibit_loc": "BF",
+                              "exhibit_id": "WM",                              
                               "exhibit_desc" : "Second hall is the Hall of World Mountains where visitors are introduced to the \
 national and international mountains, historical background, highest peaks, \
 Information of all 14 peaks over 8 thousand meters of height and their \
@@ -42,9 +44,10 @@ contributions of five prominent personalities are displayed",
                                                 {"section_name": "Corner of Dedication", "section_num" : 4, "section_id":"WM_4"}]}]);
         break;
 
-        case 'MA' :  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_MA.jpg",
+        case 'MA' :  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_MA.png",
                               "exhibit_name": [{"line":"Hall of"}, {"line":"Mountain Activities"}],
                               "exhibit_loc": "BF",
+                              "exhibit_id": "MA",                              
                               "exhibit_desc" :"This third hall displays the equipments, clothes, different professional loops of \
 the ropes and photographs of French Expedition team leader; recorder holder \
 Maurice Herzog who scaled Annapurna for the first time in 1950. Beside Herzog \
@@ -67,9 +70,10 @@ whom nobody has seen but many like to believe in.",
                                                 {"section_name": "Climate Change Section", "section_num" : 5, "section_id":"MA_5"},
                                                 {"section_name": "Touch-screen", "section_num" : 6, "section_id":"MA_6"}]}]);
         break;
-        case 'AE' :  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_AE.jpg",
+        case 'AE' :  res.json([{"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_AE.png",
                               "exhibit_name": [{"line":"Hall of"}, {"line":"Associates\' Exhibition"}],
                               "exhibit_loc": "BF",
+                              "exhibit_id": "AE",                              
                               "exhibit_desc" : "The displays in the hall of arrangements in the basement ends here, \
 and the visitors move to the first floor for further information related to \
 socioeconomic life of the mountain people, their activities in the \

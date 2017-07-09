@@ -13,6 +13,7 @@ var main = require('./routes/main');
 var museum_info = require('./routes/museum_info');
 var exhibitList = require('./routes/exhibitList');
 var exhibit = require('./routes/exhibit');
+var map = require('./routes/map');
 var path = require('path');
 var app = express();
 
@@ -36,6 +37,7 @@ app.use('/main', main);
 app.use('/museum_info', museum_info);
 app.use('/exhibit', exhibit);
 app.use('/exhibitList', exhibitList);
+app.use('/map', map);
 app.use('/public', express.static(path.join(__dirname, '/public/images')));
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
