@@ -12,7 +12,7 @@ router.get('/', function(req, res, next){
 router.get('/:_facility', function(req, res, next){
   type =  req.params._facility;
   if(type == "Library")
-    res.json([{"lib_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/lib_img.png"}, {"lib_name":"American Alpine Club"}, 
+    res.json([{"lib_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/lib_img.jpg"}, {"lib_name":"American Alpine Club"}, 
               {"lib_name":"Annapurna"}, 
               {"lib_name":"EC"}, 
               {"lib_name":"Eastern Himalaya"}, 
