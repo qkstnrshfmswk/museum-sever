@@ -3,7 +3,7 @@ var router = express.Router();
 
 router.get('/', function(req, res, next){
     res.json([{"facilities":"Library"},
-             {"facilities":"Gokha Village Restaurant"},
+             {"facilities":"Gorkha Village Restaurant"},
              {"facilities":"Souvenir Shop"},
              {"facilities": "Wall Climbing"},
              {"facilities":"Parking Lot"}])
@@ -31,7 +31,7 @@ router.get('/:_facility', function(req, res, next){
               {"lib_name":"Tibet, Central Asia"}, 
               {"lib_name":"Trekking"}, 
               {"lib_name":"Western Himalaya"}]);
-else if(type == "Gokha Village Restaurant")
+else if(type == "Gorkha Village Restaurant")
     res.json([{"Restaruant_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/Restaurant_image.png"},
               {"capability": "10 Tables / Maximum 40 people"}, 
               {"menu":"Starter", 
