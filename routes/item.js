@@ -45,7 +45,7 @@ router.post('/', function(req, res) {
   var section_id = req.body.section_id;
   var subsection_id = req.body.subsection_id;
   var item_hit_num = req.body.item_hit_num;
-
+  var item_section = req.body.item_section;
   db.museumItems.insert(
         {
             item_id : item_id,
@@ -56,7 +56,8 @@ router.post('/', function(req, res) {
             category_id : category_id,
             section_id: section_id,
             subsection_id : subsection_id,
-            item_hit_num : item_hit_num
+            item_hit_num : item_hit_num,
+            item_section : item_section
         },
         function(err, doc){
           if(err) res.send(err);
@@ -93,7 +94,7 @@ router.put('/:_id', function(req, res, next){
   var section_id = req.body.section_id;
   var subsection_id = req.body.subsection_id;
   var item_hit_num = req.body.item_hit_num;
-
+  var item_section = req.body.item_section;
   db.museumItems.update(
     {
       _id:mongo.ObjectId(id)
@@ -108,7 +109,8 @@ router.put('/:_id', function(req, res, next){
             category_id : category_id,
             section_id: section_id,
             subsection_id : subsection_id,
-            item_hit_num : item_hit_num            
+            item_hit_num : item_hit_num,
+            item_section : item_section            
       }
     }, {upset : false},
     function (err, doc){
@@ -118,6 +120,18 @@ router.put('/:_id', function(req, res, next){
   )
 });
 
+
+router.delete('/:_id',function (req,res) {
+    id = req.params._id;
+ 
+    db.museumItems.remove(
+        {
+            _id:mongo.ObjectId(id)
+        }, function (err,doc) {
+            res.json(doc);
+        }
+    )
+});
 
 router.get('/:_itemID', function(req, res, next){
   id = req.params._itemID;
@@ -143,5 +157,8 @@ router.get('/:_itemID', function(req, res, next){
   }
 
 })
+
+
+
 
 module.exports = router;
