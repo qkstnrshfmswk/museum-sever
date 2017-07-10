@@ -4,7 +4,7 @@ var mongo = require('mongojs');
 var db = mongo('museum', ['exhibitList']);
 
 router.get('/', function(req, res, next){
-    db.exhibitList.fiind({}, function(err, doc){
+    db.exhibitList.find().sort({index:1}, function(err, doc){
         if(err) res.send(err);
         res.json(doc);
     });
@@ -15,13 +15,14 @@ router.post('/', function(req, res){
     var exhibit_name = req.body.exhibit_name;
     var exhibit_loc = req.body.exhibit_loc;
     var id = req.body.exhibit_id;
-  
+    var index = req.body.index;
     db.exhibitList.insert(
         {
             exhibit_img : exhibit_img,
             exhibit_name : exhibit_name,
             exhibit_loc : exhibit_loc,
-            id : id
+            id : id,
+            index: index
         },
         function(err, doc){
             if(err) res.send(err);
