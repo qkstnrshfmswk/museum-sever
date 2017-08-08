@@ -14,6 +14,8 @@ var museum_info = require('./routes/museum_info');
 var exhibitList = require('./routes/exhibitList');
 var exhibit = require('./routes/exhibit');
 var map = require('./routes/map');
+var maps = require('./routes/maps');
+
 var path = require('path');
 var app = express();
 
