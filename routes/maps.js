@@ -24,7 +24,7 @@ router.post('/', function(req, res) {
   var map_img = req.body.map_img;
   var map_name = req.body.map_name;
   
-  db.map.insert(
+  db.maps.insert(
         {
             map_img : map_img,
             map_name : map_name
