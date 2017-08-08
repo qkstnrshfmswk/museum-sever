@@ -7,14 +7,14 @@ var db = mongo('museum', ['maps']);
 var db_info = mongo('museum', ['mapsInfo']);
 
 router.get('/', function(req, res, next) {
-  db.map.find({}, function(err, doc){
+  db.maps.find({}, function(err, doc){
     if(err) res.send(err);
     res.json(doc);
   });
 });
 
 router.get('/info', function(req, res, next) {
-  db_info.mapInfo.find({}, function(err, doc){
+  db_info.mapsInfo.find({}, function(err, doc){
     if(err) res.send(err);
     res.json(doc);
   });
@@ -45,7 +45,7 @@ router.post('/map_info', function(req, res) {
   var exhibit_id = req.body.exhibit_id;
   var info = req.body.info;
   var info_type = req.body.info_type;
-  db_info.mapInfo.insert(
+  db_info.mapsInfo.insert(
         {
             map_name : map_name,
             info : info,
@@ -65,7 +65,7 @@ router.put('/:_id', function(req, res, next){
   var map_name = req.body.map_name;
   var map_img = req.body.map_img;
   
-  db.map.update(
+  db.maps.update(
     {
       _id:mongo.ObjectId(id)
     },{
@@ -86,7 +86,7 @@ router.put('/info/:_id', function(req, res, next){
   var map_name = req.params.map_name;
   var info = req.body.info;
   var info_type = req.body.info_type;
-  db_info.mapInfo.update(
+  db_info.mapsInfo.update(
     {
       _id:mongo.ObjectId(id)
     },{
