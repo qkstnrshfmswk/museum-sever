@@ -2,9 +2,9 @@ var express = require('express');
 var router = express.Router();
 var mongo = require('mongojs');
 //map name and image
-var db = mongo('museum', ['map']);
+var db = mongo('museum', ['maps']);
 //information
-var db_info = mongo('museum', ['mapInfo']);
+var db_info = mongo('museum', ['mapsInfo']);
 
 router.get('/', function(req, res, next) {
   db.map.find({}, function(err, doc){
