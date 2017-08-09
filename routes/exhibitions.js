@@ -1,20 +1,20 @@
 var express = require('express');
 var router = express.Router();
 var mongo = require('mongojs');
-var db = mongo('museum', ['exhibitHall']);
+var db = mongo('museum', ['exhibitHalls']);
 /* GET home page. */
 
 
 router.get('/:exhibit_ID', function(req, res, next){
     id = req.params.exhibit_ID;
-    db.exhibitHall.find({"exhibit_id":id}, function(err, doc){
+    db.exhibitHalls.find({"exhibit_id":id}, function(err, doc){
         if(err) res.send(err);
         res.json(doc);
     });
 });
 
 router.get('/', function(req, res, next){
-    db.exhibitHall.find({}, function(err, doc){
+    db.exhibitHalls.find({}, function(err, doc){
         if(err) res.send(err);
         res.json(doc);
     })
@@ -27,7 +27,7 @@ router.post('/', function(req, res){
     var exhibit_id = req.body.exhibit_id;
     var exhibit_desc = req.body.exhibit_desc;
     var section_list = req.body.section_list;
-    db.exhibitHall.insert(
+    db.exhibitHalls.insert(
         {
             exhibit_img : exhibit_img,
             exhibit_name :exhibit_name,
@@ -45,7 +45,7 @@ router.post('/', function(req, res){
 router.delete('/:_id',function (req,res) {
     id = req.params._id;
  
-    db.exhibitHall.remove(
+    db.exhibitHalls.remove(
         {
             _id:mongo.ObjectId(id)
         }, function (err,doc) {

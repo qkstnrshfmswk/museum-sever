@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var mongo = require('mongojs');
-var db = mongo('museum', ['exhibitList']);
+var db = mongo('museum', ['exhibitsList']);
 
 router.get('/', function(req, res, next){
-    db.exhibitList.find().sort({index:1}, function(err, doc){
+    db.exhibitsList.find().sort({index:1}, function(err, doc){
         if(err) res.send(err);
         res.json(doc);
     });
@@ -16,7 +16,7 @@ router.post('/', function(req, res){
     var exhibit_loc = req.body.exhibit_loc;
     var id = req.body.exhibit_id;
     var index = req.body.index;
-    db.exhibitList.insert(
+    db.exhibitsList.insert(
         {
             exhibit_img : exhibit_img,
             exhibit_name : exhibit_name,
@@ -33,7 +33,7 @@ router.post('/', function(req, res){
 router.delete('/:_id',function (req,res) {
     id = req.params._id;
  
-    db.exhibitList.remove(
+    db.exhibitsList.remove(
         {
             _id:mongo.ObjectId(id)
         }, function (err,doc) {
@@ -41,11 +41,6 @@ router.delete('/:_id',function (req,res) {
         }
     )
 });
-   
-
-module.exports = router;
-
-
 
 
 module.exports = router;
