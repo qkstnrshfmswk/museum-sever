@@ -44,7 +44,7 @@ app.use('/main', main);
 app.use('/museum_info', museum_info);
 app.use('/exhibit', exhibit);
 app.use('/exhibitions', exhibitions);
-app.use('/exhibition_list', exhibition-list);
+app.use('/exhibition_list', exhibition_list);
 
 app.use('/exhibitList', exhibitList);
 app.use('/map', map);
