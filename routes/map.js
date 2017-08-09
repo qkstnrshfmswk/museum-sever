@@ -37,7 +37,7 @@ router.post('/', function(req, res) {
 });
 
 
-router.post('/map_info', function(req, res) {
+router.post('/info', function(req, res) {
   var map_name = req.body.map_name;
   var link = req.body.link;
 

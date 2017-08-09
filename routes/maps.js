@@ -58,6 +58,27 @@ router.post('/map_info', function(req, res) {
     )
 });
 
+router.post('/map-info', function(req, res) {
+  var map_name = req.body.map_name;
+  var link = req.body.link;
+
+  var facility_type = req.body.facility_type;
+  var exhibit_id = req.body.exhibit_id;
+  var info = req.body.info;
+  var info_type = req.body.info_type;
+  db_info.mapsInfo.insert(
+        {
+            map_name : map_name,
+            info : info,
+            info_type : info_type
+        },
+        function(err, doc){
+          if(err) res.send(err);
+          res.json(doc);
+        }
+    )
+});
+
 
 router.put('/:_id', function(req, res, next){
   var id = req.params._id;

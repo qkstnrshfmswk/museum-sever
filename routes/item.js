@@ -133,8 +133,8 @@ router.delete('/:_id',function (req,res) {
     )
 });
 
-router.get('/:_itemID', function(req, res, next){
-  id = req.params._itemID;
+router.get('/:itemID', function(req, res, next){
+  id = req.params.itemID;
   console.log(id);
   switch(id)
   {

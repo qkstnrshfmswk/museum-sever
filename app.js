@@ -11,8 +11,12 @@ var facility = require('./routes/facility');
 var section = require('./routes/section');
 var main = require('./routes/main');
 var museum_info = require('./routes/museum_info');
+var museum = require('./routes/museum');
 var exhibitList = require('./routes/exhibitList');
 var exhibit = require('./routes/exhibit');
+var exhibitions = require('./routes/exhibitions');
+var exhibitiion_list = require('./routes/exhibition-list');
+
 var map = require('./routes/map');
 var maps = require('./routes/maps');
 
@@ -32,12 +36,16 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/museum', museum);
 app.use('/item', item);
 app.use('/facility', facility);
 app.use('/section', section);
 app.use('/main', main);
 app.use('/museum_info', museum_info);
 app.use('/exhibit', exhibit);
+app.use('/exhibitions', exhibitions);
+app.use('/exhibition_list', exhibition-list);
+
 app.use('/exhibitList', exhibitList);
 app.use('/map', map);
 app.use('/maps', maps);

@@ -9,8 +9,8 @@ router.get('/', function(req, res, next){
              {"facilities":"Parking Lot"}])
 });
 
-router.get('/:_facility', function(req, res, next){
-  type =  req.params._facility;
+router.get('/:facility', function(req, res, next){
+  type =  req.params.facility;
   if(type == "Library")
     res.json([{"lib_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/lib_img.jpg"}, {"lib_name":"American Alpine Club"}, 
               {"lib_name":"Annapurna"}, 
