@@ -15,7 +15,7 @@ var museum = require('./routes/museum');
 var exhibitList = require('./routes/exhibitList');
 var exhibit = require('./routes/exhibit');
 var exhibitions = require('./routes/exhibitions');
-var exhibitiion_list = require('./routes/exhibition-list');
+var exhibition_list = require('./routes/exhibition-list');
 
 var map = require('./routes/map');
 var maps = require('./routes/maps');
@@ -44,7 +44,7 @@ app.use('/main', main);
 app.use('/museum_info', museum_info);
 app.use('/exhibit', exhibit);
 app.use('/exhibitions', exhibitions);
-app.use('/exhibition_list', exhibition_list);
+app.use('/exhibition-list', exhibition_list);
 
 app.use('/exhibitList', exhibitList);
 app.use('/map', map);
