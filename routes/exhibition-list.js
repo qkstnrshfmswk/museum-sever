@@ -4,10 +4,39 @@ var mongo = require('mongojs');
 var db = mongo('museum', ['exhibitsList']);
 
 router.get('/', function(req, res, next){
-    db.exhibitsList.find().sort({index:1}, function(err, doc){
-        if(err) res.send(err);
-        res.json(doc);
-    });
+    res.json([
+{
+"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_MP.png",
+"exhibit_name":"Mountain people",
+"exhibit_loc": "GF",
+"exhibit_id": "MP",
+"index": 1
+},
+{
+"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_WM.png",
+"exhibit_name":"World Mountain",
+"exhibit_loc": "BF",
+"exhibit_id": "WM",
+"index": 2
+},
+{
+"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_MA.png",
+"exhibit_name":"Mountain Activities",
+"exhibit_loc": "BF",
+"exhibit_id": "MA",
+"index": 3
+},
+{
+"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_AE.png",
+"exhibit_name":"Associates' Exhibition",
+"exhibit_loc": "BF",
+"exhibit_id": "AE",
+"index": 4
+}])
+    // db.exhibitsList.find().sort({index:1}, function(err, doc){
+    //     if(err) res.send(err);
+    //     res.json(doc);
+    // });
 });
 
 router.post('/', function(req, res){

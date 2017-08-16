@@ -7,10 +7,11 @@ var db = mongo('museum', ['maps']);
 var db_info = mongo('museum', ['mapsInfo']);
 
 router.get('/', function(req, res, next) {
-  db.maps.find({}, function(err, doc){
-    if(err) res.send(err);
-    res.json(doc);
-  });
+  res.json([{}])
+  // db.maps.find({}, function(err, doc){
+  //   if(err) res.send(err);
+  //   res.json(doc);
+  // });
 });
 
 router.get('/info', function(req, res, next) {
