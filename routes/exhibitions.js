@@ -12,7 +12,7 @@ router.get('/:exhibit_ID', function(req, res, next){
     {
         case 'MP':  res.json([
 
-        {"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_MP.png",
+        {"exhibit_img": "http://ec2-54-169-228-245.ap-southeast-1.compute.amazonaws.com:3000/public/hall_MP.png",
                               "exhibit_name": "Mountain people",
                               "exhibit_loc": "GF",
                               "exhibit_-id": "MP",
@@ -24,7 +24,7 @@ router.get('/:exhibit_ID', function(req, res, next){
                                                 ]);
         break;
 
-        case 'WM' : res.json([ {"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_WM.png",
+        case 'WM' : res.json([ {"exhibit_img": "http://ec2-54-169-228-245.ap-southeast-1.compute.amazonaws.com:3000/public/hall_WM.png",
                               "exhibit_name": "World Mountain",
                               "exhibit_loc": "BF",
                               "exhibit_id": "WM",                              
@@ -38,7 +38,7 @@ router.get('/:exhibit_ID', function(req, res, next){
 
         case 'MA' :  res.json([
 
-        {"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_MA.png",
+        {"exhibit_img": "http://ec2-54-169-228-245.ap-southeast-1.compute.amazonaws.com:3000/public/hall_MA.png",
                               "exhibit_name": "Mountain Activities",
                               "exhibit_loc": "BF",
                               "exhibit_id": "MA",                              
@@ -54,7 +54,7 @@ first Manaslu summiteers and other climberʼs equipments are showcased here.<br>
         break;
         case 'AE' :  res.json([
 
-        {"exhibit_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/hall_AE.png",
+        {"exhibit_img": "http://ec2-54-169-228-245.ap-southeast-1.compute.amazonaws.com:3000/public/hall_AE.png",
                               "exhibit_name": [{"line":"Hall of"}, {"line":"Associates' Exhibition"}],
                               "exhibit_loc": "BF",
                               "exhibit_id": "AE",                              

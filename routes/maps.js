@@ -14,15 +14,15 @@ router.get('/', function(req, res, next) {
   // });
   res.json([
 {
-"map_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/sitemap.jpg",
+"map_img": "http://ec2-54-169-228-245.ap-southeast-1.compute.amazonaws.com:3000/public/sitemap.jpg",
 "map_name": "SITE MAP"
 },
 {
-"map_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/basement.jpg",
+"map_img": "http://ec2-54-169-228-245.ap-southeast-1.compute.amazonaws.com:3000/public/basement.jpg",
 "map_name": "UNDERGROUND"
 },
 {
-"map_img": "http://ec2-34-224-40-186.compute-1.amazonaws.com:3000/public/ground.jpg",
+"map_img": "http://ec2-54-169-228-245.ap-southeast-1.compute.amazonaws.com:3000/public/ground.jpg",
 "map_name": "GROUND"
 }
 ])
