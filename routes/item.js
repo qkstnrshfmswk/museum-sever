@@ -4,7 +4,7 @@ var mongo = require('mongojs');
 var db = mongo('museum', ['museumItems'])
 
 
- let items = 
+items = 
 [
 {
 "item_id": "A0",
