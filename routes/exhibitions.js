@@ -76,10 +76,7 @@ var db = mongo('museum', ['exhibitHalls']);
 router.get('/:exhibit_ID', function(req, res, next){
     id = req.params.exhibit_ID;
     
-    switch(id)
-    {
-        case 'MP':  res.json([
-
+    exhibitions =[
         {"exhibit_img": "http://ec2-54-169-228-245.ap-southeast-1.compute.amazonaws.com:3000/public/hall_MP.png",
                               "exhibit_name": "Mountain people",
                               "exhibit_loc": "GF",
@@ -87,12 +84,8 @@ router.get('/:exhibit_ID', function(req, res, next){
                               "exhibit_desc" : "It showcases indigenous habitants of the mountain regions of Nepal and the world. Their life style and culture are exposed impressively below this first basement hall, influencing the subconscious of the visitors that they are at the height to understand and know the information displayed just below them. <br> For the close observation, when the visitors stare down the basement, they are ushered by the museum guides to the adjoining video hall to orient them about the people, culture and the mountains of Khumbu region.",
                                 "section_list":[{"section_name":"Mountain People of Nepal", "section_num": 1, "section_id":"MP_1"}, 
                                                 {"section_name":"Mountain People of the World", "section_num": 2, "section_id":"MP_2"},
-                                                {"section_name": "The Mandala", "section_num" : 3, "section_id":"MP_3"}]}
-
-                                                ]);
-        break;
-
-        case 'WM' : res.json([ {"exhibit_img": "http://ec2-54-169-228-245.ap-southeast-1.compute.amazonaws.com:3000/public/hall_WM.png",
+                                                {"section_name": "The Mandala", "section_num" : 3, "section_id":"MP_3"}]}, 
+        {"exhibit_img": "http://ec2-54-169-228-245.ap-southeast-1.compute.amazonaws.com:3000/public/hall_WM.png",
                               "exhibit_name": "World Mountain",
                               "exhibit_loc": "BF",
                               "exhibit_id": "WM",                              
@@ -100,12 +93,7 @@ router.get('/:exhibit_ID', function(req, res, next){
                                 "section_list":[{"section_name":"Mountain Section", "section_num": 1, "section_id":"WM_1"}, 
                                                 {"section_name":"Geological Section", "section_num": 2, "section_id":"WM_2"},
                                                 {"section_name": "Flora and Fauna Section", "section_num" : 3, "secion_id":"WM_3"},
-                                                {"section_name": "Corner of Dedication", "section_num" : 4, "section_id":"WM_4"}]}]);
-
-        break;
-
-        case 'MA' :  res.json([
-
+                                                {"section_name": "Corner of Dedication", "section_num" : 4, "section_id":"WM_4"}]},
         {"exhibit_img": "http://ec2-54-169-228-245.ap-southeast-1.compute.amazonaws.com:3000/public/hall_MA.png",
                               "exhibit_name": "Mountain Activities",
                               "exhibit_loc": "BF",
@@ -117,11 +105,7 @@ first Manaslu summiteers and other climberʼs equipments are showcased here.<br>
                                                 {"section_name": "Mountain Ecoloby / Environment Section", "section_num" : 3, "section_id":"MA_3"},
                                                 {"section_name": "Imaging Everest", "section_num" : 4, "section_id":"MA_4"},
                                                 {"section_name": "Climate Change Section", "section_num" : 5, "section_id":"MA_5"},
-                                                {"section_name": "Touch-screen", "section_num" : 6, "section_id":"MA_6"}]}]);
-
-        break;
-        case 'AE' :  res.json([
-
+                                                {"section_name": "Touch-screen", "section_num" : 6, "section_id":"MA_6"}]},
         {"exhibit_img": "http://ec2-54-169-228-245.ap-southeast-1.compute.amazonaws.com:3000/public/hall_AE.png",
                               "exhibit_name": [{"line":"Hall of"}, {"line":"Associates' Exhibition"}],
                               "exhibit_loc": "BF",
@@ -130,9 +114,13 @@ first Manaslu summiteers and other climberʼs equipments are showcased here.<br>
                                 "section_list":[{"section_name":"Lakhang", "section_num": 1, "section_id":"AE_1"}, 
                                                 {"section_name":"Library", "section_num": 2, "section_id":"AE_2"},
                                                 {"section_name": "Mt.Manaslu Model", "section_num" : 3, "section_id":"AE_3"},
-                                                {"section_name": "Yak Model", "section_num" : 4, "section_id":"AE_4"}]}]);
-        break;
-    }
+                                                {"section_name": "Yak Model", "section_num" : 4, "section_id":"AE_4"}]}];
+//  res.json(exhibitions.find(item=> {
+//   return item.exhibit_id == id;
+// }));
+ res.json(exhibitions.filter(
+      function(exhibitions){ return exhibitions.exhibit_id == id; }
+  )[0]);
 });
 
 

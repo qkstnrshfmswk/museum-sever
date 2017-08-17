@@ -475,18 +475,18 @@ items =
 router.get('/details/:item_id', function(req, res, next){
   para_item_id = req.params.item_id;
 
- res.json(items.find(item=> {
-  return item.item_id == para_item_id;
-}));
+ res.json(items.filter(
+      function(items){ return items.item_id == item_id }
+  )[0]);
 
 
 });
 
 router.get('/list/:section_id', function(req, res, next){
   var section_id = req.params.section_id;
- res.json(items.find(item=> {
-  return item.section_id == section_id;
-}));
+ res.json(items.filter(
+      function(items){ return items.section_id == section_id }
+  ));
 });
 
 // router.get('/list/:section_id', function(req, res, next){
