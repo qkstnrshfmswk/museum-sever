@@ -484,7 +484,7 @@ router.get('/details/:item_id', function(req, res, next){
 
 router.get('/list/:section_id', function(req, res, next){
   var section_id = req.params.section_id;
- res.json(items.filter(
+  res.json(items.filter(
       function(items){ return items.section_id == section_id }
   ));
 });
@@ -497,14 +497,20 @@ router.get('/list/:section_id', function(req, res, next){
 //   });
 // });
 
+// router.get('/search/:item_name', function(req, res, next){
+//   var item_name = req.params.item_name;
+//   db.museumItems.find({"item_name": item_name}, {"item_id":1, "section_id":1, "_id":0}, function(err, doc){
+//     if(err) res.send(err);
+//     res.json(doc);
+//   })
+// });
+
 router.get('/search/:item_name', function(req, res, next){
   var item_name = req.params.item_name;
-  db.museumItems.find({"item_name": item_name}, {"item_id":1, "section_id":1, "_id":0}, function(err, doc){
-    if(err) res.send(err);
-    res.json(doc);
-  })
+  res.json(items.filter(
+      function(items){ return items.item_name == item_name }
+  ));
 });
-
 
 router.post('/', function(req, res) {
   var item_id = req.body.item_id;

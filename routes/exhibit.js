@@ -13,6 +13,7 @@ router.get('/:exhibit_ID', function(req, res, next){
     });
 });
 
+//---- This is not used
 router.get('/', function(req, res, next){
     db.exhibitHall.find({}, function(err, doc){
         if(err) res.send(err);
