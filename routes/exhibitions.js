@@ -120,7 +120,7 @@ first Manaslu summiteers and other climberʼs equipments are showcased here.<br>
 // }));
  res.json(exhibitions.filter(
       function(exhibitions){ return exhibitions.exhibit_id == id; }
-  )[0]);
+  ));
 });
 
 

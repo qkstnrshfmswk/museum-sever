@@ -477,7 +477,7 @@ router.get('/details/:item_id', function(req, res, next){
 
  res.json(items.filter(
       function(items){ return items.item_id == item_id }
-  )[0]);
+  ));
 
 
 });
