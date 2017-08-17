@@ -473,7 +473,7 @@ items =
 // });
 
 router.get('/details/:item_id', function(req, res, next){
-  para_item_id = req.params.item_id;
+  item_id = req.params.item_id;
 
  res.json(items.filter(
       function(items){ return items.item_id == item_id }
