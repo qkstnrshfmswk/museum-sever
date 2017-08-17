@@ -80,7 +80,7 @@ router.get('/:exhibit_ID', function(req, res, next){
         {"exhibit_img": "http://ec2-54-169-228-245.ap-southeast-1.compute.amazonaws.com:3000/public/hall_MP.png",
                               "exhibit_name": "Mountain people",
                               "exhibit_loc": "GF",
-                              "exhibit_-id": "MP",
+                              "exhibit_id": "MP",
                               "exhibit_desc" : "It showcases indigenous habitants of the mountain regions of Nepal and the world. Their life style and culture are exposed impressively below this first basement hall, influencing the subconscious of the visitors that they are at the height to understand and know the information displayed just below them. <br> For the close observation, when the visitors stare down the basement, they are ushered by the museum guides to the adjoining video hall to orient them about the people, culture and the mountains of Khumbu region.",
                                 "section_list":[{"section_name":"Mountain People of Nepal", "section_num": 1, "section_id":"MP_1"}, 
                                                 {"section_name":"Mountain People of the World", "section_num": 2, "section_id":"MP_2"},
