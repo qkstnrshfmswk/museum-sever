@@ -472,6 +472,11 @@ items =
 //   res.json([]);
 // });
 
+router.get('/', function(req, res, next){
+  res.json(items);
+});
+
+
 router.get('/details/:item_id', function(req, res, next){
   item_id = req.params.item_id;
 
